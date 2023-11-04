@@ -1,32 +1,15 @@
-first_num = int(input("Please enter first number:"))
-second_num = int(input("Please enter second number:"))
-action = input("Please enter action:")
+number = int(input("Enter five digit number: "))
 
-if action == '+':
-    print("Your result is:", first_num + second_num)
-elif action == "-":
-    print("Your result is:", first_num - second_num)
-elif action == "*":
-    print("Your result is:", first_num * second_num)
-elif action == "/":
-    if first_num == 0:
-        print("You can't divide by 0")
-    elif second_num == 0:
-        print("You can't divide by 0")
-    else:
-        print("Your result is:", first_num / second_num)
+digit1 = number % 10
+number //= 10
+digit2 = number % 10
+number //= 10
+digit3 = number % 10
+number //= 10
+digit4 = number % 10
+number //= 10
+digit5 = number % 10
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+reversed_number = digit1 * 10000 + digit2 * 1000 + digit3 * 100 + digit4 * 10 + digit5
+print(reversed_number)
